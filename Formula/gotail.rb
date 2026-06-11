@@ -11,7 +11,7 @@ class Gotail < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/borisdvlpr/gotail/releases/download/v1.0.0/gotail_Darwin_x86_64.tar.gz"
-      sha256 "ca70aa5054d8241b4b625bffb3f9b5016c0a4e7c96775da36d1a9930e04a7395"
+      sha256 "6a9737b3d688aaef0ce95c1bb0f9aaa66a906726f3f24e6ac2aa304db0cde420"
 
       define_method(:install) do
         bin.install "gotail"
@@ -19,7 +19,7 @@ class Gotail < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/borisdvlpr/gotail/releases/download/v1.0.0/gotail_Darwin_arm64.tar.gz"
-      sha256 "90defe53da42e3334d288dcdd342aa96331fc5d18b05962d8fb248bd8b1529e0"
+      sha256 "d1f809493a504f2f41d58122595c43b5e1e04cbf5038d274f2fede3ef741bdd8"
 
       define_method(:install) do
         bin.install "gotail"
@@ -30,21 +30,21 @@ class Gotail < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/borisdvlpr/gotail/releases/download/v1.0.0/gotail_Linux_x86_64.tar.gz"
-      sha256 "f58d844d8a6f55439fda86f61904ba1f5bc1784bc924c7bc0bddf1b6a289d34d"
+      sha256 "a967aaf870fc1a904f0b16b291de06fbf487ee9cf3b310dce21721e97b56833a"
       define_method(:install) do
         bin.install "gotail"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/borisdvlpr/gotail/releases/download/v1.0.0/gotail_Linux_armv6.tar.gz"
-      sha256 "cfac6f9679c3c1293950ee95ab2882c80ba6f103a17b802bda16c099f5c863fe"
+      sha256 "d52e5089d8a4274e585a7d470f7677567cc669d138317661dbf83ade96a7d58d"
       define_method(:install) do
         bin.install "gotail"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/borisdvlpr/gotail/releases/download/v1.0.0/gotail_Linux_arm64.tar.gz"
-      sha256 "6f4a0e4d6d82bb2e9079e918c66c2c280685ed4c9f23810fd55244daf0d0c705"
+      sha256 "b685598a430a8cc40b4a7b8bf135468a8af3341e8e25da50cfe32bf59583e7b5"
       define_method(:install) do
         bin.install "gotail"
       end
