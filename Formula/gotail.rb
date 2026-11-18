@@ -5,21 +5,21 @@
 class Gotail < Formula
   desc "Bootstrap Tailscale into your Raspberry Pi from the very first boot."
   homepage "https://github.com/borisdvlpr/gotail"
-  version "1.1.0"
+  version "1.1.1"
   license "BSD-3-Clause"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/borisdvlpr/gotail/releases/download/v1.1.0/gotail_Darwin_x86_64.tar.gz"
-      sha256 "02cfd40d4c99758c6c0bf2b2ee85386bb1ad7b1851bbe6646691822716d3cfde"
+      url "https://github.com/borisdvlpr/gotail/releases/download/v1.1.1/gotail_Darwin_x86_64.tar.gz"
+      sha256 "403cd31d858251de89bd91dd93def0155df47827fa5346a5ddbf9438f285a99b"
 
       define_method(:install) do
         bin.install "gotail"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/borisdvlpr/gotail/releases/download/v1.1.0/gotail_Darwin_arm64.tar.gz"
-      sha256 "95692a03bf05032fd393e3946414483a90e2ce4a5ce8626681c81f215c78bac5"
+      url "https://github.com/borisdvlpr/gotail/releases/download/v1.1.1/gotail_Darwin_arm64.tar.gz"
+      sha256 "862d5e78b272d7afe1556141db3f889c38beceb64710c4afc6fb337c00f40e4f"
 
       define_method(:install) do
         bin.install "gotail"
@@ -29,22 +29,22 @@ class Gotail < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/borisdvlpr/gotail/releases/download/v1.1.0/gotail_Linux_x86_64.tar.gz"
-      sha256 "6c4a9b3de4710ed5ac3f8a4019f78f897beca15b31da87fbe27a8a54f24cd1ec"
+      url "https://github.com/borisdvlpr/gotail/releases/download/v1.1.1/gotail_Linux_x86_64.tar.gz"
+      sha256 "f268014ddc9cb0bd4fa82f1b807a696f7202d4f2abc523a551d8c4e15867f679"
       define_method(:install) do
         bin.install "gotail"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/borisdvlpr/gotail/releases/download/v1.1.0/gotail_Linux_armv6.tar.gz"
-      sha256 "9e684e2419862e6aaae16dd751e7f5ff3872a0eba97c215c5258855a3c94cbb6"
+      url "https://github.com/borisdvlpr/gotail/releases/download/v1.1.1/gotail_Linux_armv6.tar.gz"
+      sha256 "786bda09cf743b5700de360c17ba5962e332803553b05259dc7133a16dad3791"
       define_method(:install) do
         bin.install "gotail"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/borisdvlpr/gotail/releases/download/v1.1.0/gotail_Linux_arm64.tar.gz"
-      sha256 "1de89d12c3ac7f2ed2606be3b0db36e2a368253a4c217c0587febf079c79e9b0"
+      url "https://github.com/borisdvlpr/gotail/releases/download/v1.1.1/gotail_Linux_arm64.tar.gz"
+      sha256 "8368790317f0f24d4fc02ef458f08b56968bab299df08c5b7601da7671b87a51"
       define_method(:install) do
         bin.install "gotail"
       end
